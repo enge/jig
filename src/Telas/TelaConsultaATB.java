@@ -60,7 +60,7 @@ public class TelaConsultaATB extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         String atual = jTextField1.getText().toUpperCase();
              ArrayList<String> lista = new ArrayList<>();
-        lista.add("2010G8351010"); lista.add("2010G6419013"); lista.add("2010L4280010");lista.add("qeqe");
+        lista.add("2010G8351010"); lista.add("2010G6419013"); lista.add("2010L4280010");
         lista.add("2010M2651014"); lista.add("2010J2400013"); lista.add("2010H2419010");
         lista.add("2010H0221019"); lista.add("2010G3949018"); lista.add("2010D4845016");
         lista.add("300000000090"); lista.add("300000002991"); lista.add("580149037005");
