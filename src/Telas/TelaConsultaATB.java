@@ -90,13 +90,20 @@ public class TelaConsultaATB extends javax.swing.JFrame {
         lista.add("300000005526"); lista.add("2010H3383010"); lista.add("2010L1353017");
         lista.add("2010G8028012"); lista.add("2010l7659010"); lista.add("2010k9294017");
         lista.add("920000006538"); lista.add("I40187506017"); lista.add("I40187850010");
-        lista.add("300000004711");
+        lista.add("300000004711"); lista.add("300000004705");
         
         if (lista.contains(atual)) {
             switch (atual) {
                 case "0411G3634013": case "0411G3635010": case "2010F5078014" :
                     try {
                         Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\Jig_cass");
+                    } catch (IOException ex) {}
+                       dispose();  
+                     }
+             switch (atual) {
+                case "300000004705": 
+                    try {
+                        Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\PrinterIttUsb");
                     } catch (IOException ex) {}
                        dispose();  
                      }
