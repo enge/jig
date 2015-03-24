@@ -69,7 +69,7 @@ public class TelaConsultaATC extends javax.swing.JFrame {
          lista.add("920000000345"); lista.add("0508J6114018"); lista.add("0502M9907016");
          lista.add("470000002990"); lista.add("04RUL8799000"); lista.add("920000006832");
          lista.add("470000001134"); lista.add("470000001133"); lista.add("470000002070");
-         lista.add("920000006538"); lista.add("0407F0185018"); lista.add("9211G4350001");
+         lista.add("0407F0185018"); lista.add("9211G4350001"); lista.add("0507K0697012");
          lista.add("0502L4162001"); lista.add("0502F0788013"); lista.add("470000003366");
          lista.add("0502M6819000"); lista.add("470000002044"); lista.add("I50238837013");
          lista.add("0502G9481012"); lista.add("I50282763011"); lista.add("0502L7960006");
@@ -83,7 +83,9 @@ public class TelaConsultaATC extends javax.swing.JFrame {
          lista.add("470000002577"); lista.add("0507L1126003"); lista.add("470000001711");
          lista.add("920000000534"); lista.add("0508I5003015"); lista.add("920000006832");
          lista.add("0508L5295014"); lista.add("0508L3935016"); lista.add("470000001546");
-         lista.add("470000001618");
+         lista.add("470000001618"); lista.add("201RL8582010"); lista.add("201RM6330010");
+         lista.add("201RM3803011"); lista.add("0507L6940019"); lista.add("0507N1304012");
+         lista.add("920000006535"); lista.add("920000006541");
                  if (lista.contains(atual)) {
            switch (atual) {
                  case "470000001134": case "470000001133": 
@@ -100,13 +102,25 @@ public class TelaConsultaATC extends javax.swing.JFrame {
                     dispose(); 
            }
            switch (atual) {
-                 case "470000001546": case "470000001618":
+                 case "920000006541": 
                     try {
-                        Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\Exerciser");
-                        Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\ServiceProvider");
+                        Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\futronic");
                     } catch (IOException ex){} 
                     dispose(); 
-                   }
+           }
+           switch (atual) {
+                 case "201RL8582010": case "201RM6330010": case "201RM3803011":
+                     case "0507L6940019": case "0507N1304012": case "0507K0697012":
+                    try {
+                        Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\KUBUS");
+                    } catch (IOException ex){} 
+                    dispose(); 
+           }
+           switch (atual) {
+                 case "470000001546": case "470000001618":
+                   dispose(); 
+                     new TelaBurroughs().setVisible(true);
+                     }
            switch (atual) {
                  case "0508I5003015": 
                      dispose(); 
@@ -125,6 +139,7 @@ public class TelaConsultaATC extends javax.swing.JFrame {
                    try {
                         Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\GravaPLUS");
                         Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\TEC55");
+                        Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\project1");
                     } catch (IOException ex){} 
                     dispose(); 
                    }
@@ -205,7 +220,8 @@ public class TelaConsultaATC extends javax.swing.JFrame {
                     dispose(); 
                    }
              switch (atual) {
-                 case "920000006538": case "0407F0185018": case "9211G4350001":
+                 case "0407F0185018": case "9211G4350001": case "920000006535": 
+              
                     dispose(); 
                      new TelaMsDos().setVisible(true);
                    }

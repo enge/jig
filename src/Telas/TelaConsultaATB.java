@@ -86,7 +86,12 @@ public class TelaConsultaATB extends javax.swing.JFrame {
         lista.add("2010D4847019"); lista.add("00RUJ7768015"); lista.add("420000004813");
         lista.add("0411G3634013"); lista.add("0411G3635010"); lista.add("2010F5078014");
         lista.add("300000004220"); lista.add("300000001894"); lista.add("2010J4775014");
-        lista.add("201RM4321010");
+        lista.add("201RM4321010"); lista.add("300000004789"); lista.add("300000002294");
+        lista.add("300000005526"); lista.add("2010H3383010"); lista.add("2010L1353017");
+        lista.add("2010G8028012"); lista.add("2010l7659010"); lista.add("2010k9294017");
+        lista.add("920000006538"); lista.add("I40187506017"); lista.add("I40187850010");
+        lista.add("300000004711");
+        
         if (lista.contains(atual)) {
             switch (atual) {
                 case "0411G3634013": case "0411G3635010": case "2010F5078014" :
@@ -117,7 +122,8 @@ public class TelaConsultaATB extends javax.swing.JFrame {
                        dispose();  
                      }
            switch (atual) {
-                case "300000004177":
+                case "300000004177": case "300000004789": case "300000002294":
+                case "300000005526":        
                     dispose(); 
                      new TelaImpr().setVisible(true);
                      }
@@ -146,7 +152,7 @@ public class TelaConsultaATB extends javax.swing.JFrame {
                  case "04ROL5641009": case "04RON1618005": case "420000007947":
                  case "300000002384": case "04ROL4629002": case "300000003551":
                  case "300000003550": case "300000002378": case "300000003130":
-                    
+                 case "300000004711": 
                          dispose(); 
                      new TelaSagem().setVisible(true);
                         
@@ -154,7 +160,8 @@ public class TelaConsultaATB extends javax.swing.JFrame {
                    }
              switch (atual) {
                  case "580149037005": case "201086686011":  case "I40949266004":
-                 case "580148985007": case "9290L5833016": 
+                 case "580148985007": case "9290L5833016":  case "I40187506017":
+                 case "I40187850010":    
                     try {
                         Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\MDDMTEST.EXE ");
                     } catch (IOException ex){} 
@@ -169,7 +176,8 @@ public class TelaConsultaATB extends javax.swing.JFrame {
                     dispose(); 
                    }
             switch (atual) {
-                 case "201RL8154019": 
+                 case "201RL8154019": case "2010H3383010": case "2010M4569013":  case "2010L1353017":
+                 case "2010l7659010": case "2010g8028012": case "2010k9294017":    
                     
                     dispose(); 
                      new TelaSlockFinger().setVisible(true);
@@ -184,7 +192,8 @@ public class TelaConsultaATB extends javax.swing.JFrame {
              switch (atual) {
                 case "2010D0934014": case "2010F4160010": case "2010D4634010": case "2030A1374012": 
                 case "5801F6388000": case "2010G6419013": case "2010E2128013": case "420000003516": 
-                case "5801A5482002": case "58ROM3245006": case "04ROM4846006": 
+                case "5801A5482002": case "58ROM3245006": case "04ROM4846006": case "920000006538":
+                  
                     dispose();
                     new TelaMsDos().setVisible(true);
                    }
@@ -209,13 +218,7 @@ public class TelaConsultaATB extends javax.swing.JFrame {
                     } catch (IOException ex) {} 
                     dispose(); 
                    }
-             switch (atual) {
-                case "2010M4569013": 
-                    try {
-                        Runtime.getRuntime().exec("cmd.exe /c start C:\\teste\\Tst_Wpop485_S");
-                    } catch (IOException ex) {} 
-                    dispose(); 
-                   }
+             
                   } else {
             dispose();
             new TelaFinal().setVisible(true);
