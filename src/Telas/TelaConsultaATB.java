@@ -90,13 +90,14 @@ public class TelaConsultaATB extends javax.swing.JFrame {
         lista.add("300000005526"); lista.add("2010H3383010"); lista.add("2010L1353017");
         lista.add("2010G8028012"); lista.add("2010l7659010"); lista.add("2010k9294017");
         lista.add("920000006538"); lista.add("I40187506017"); lista.add("I40187850010");
-        lista.add("300000004711"); lista.add("300000004705");
+        lista.add("300000004711"); lista.add("300000004705"); lista.add("cassete");
         
         if (lista.contains(atual)) {
             switch (atual) {
                 case "0411G3634013": case "0411G3635010": case "2010F5078014" :
+                case "2010F5079010": case "2010F0846015": case "2010J2388013": case "2010E2735015":
                     try {
-                        Runtime.getRuntime().exec("cmd.exe /c start C:\\JIG\\Jig_cass");
+                        Runtime.getRuntime().exec("C:\\JIG\\Jig_cass.bat cmd.exe /c");
                     } catch (IOException ex) {}
                        dispose();  
                      }
@@ -133,6 +134,12 @@ public class TelaConsultaATB extends javax.swing.JFrame {
                 case "300000005526":        
                     dispose(); 
                      new TelaImpr().setVisible(true);
+                     }
+           switch (atual) {
+                case "cassete": 
+                     
+                    dispose(); 
+                     new TelaCassete().setVisible(true);
                      }
              switch (atual) {
                 case "0410D0354009": case "2010L0947010":case "300000000663":
@@ -189,13 +196,7 @@ public class TelaConsultaATB extends javax.swing.JFrame {
                     dispose(); 
                      new TelaSlockFinger().setVisible(true);
                    }
-            switch (atual) {
-                 case "2010F5079010": case "2010F0846015": case "2010J2388013": case "2010E2735015":
-                    try {
-                        Runtime.getRuntime().exec("cmd.exe /c start C:\\JIGs\\nmd\\cassetes\\jig_cass.exe");
-                    } catch (IOException ex){} 
-                    dispose(); 
-                   }
+            
              switch (atual) {
                 case "2010D0934014": case "2010F4160010": case "2010D4634010": case "2030A1374012": 
                 case "5801F6388000": case "2010G6419013": case "2010E2128013": case "420000003516": 
