@@ -90,7 +90,7 @@ public class TelaConsultaATB extends javax.swing.JFrame {
         lista.add("300000005526"); lista.add("2010H3383010"); lista.add("2010L1353017");
         lista.add("2010G8028012"); lista.add("2010l7659010"); lista.add("2010k9294017");
         lista.add("920000006538"); lista.add("I40187506017"); lista.add("I40187850010");
-        lista.add("300000004711"); lista.add("300000004705"); lista.add("cassete");
+        lista.add("300000004711"); lista.add("300000004705"); lista.add("CASSETE");
         
         if (lista.contains(atual)) {
             switch (atual) {
@@ -136,7 +136,7 @@ public class TelaConsultaATB extends javax.swing.JFrame {
                      new TelaImpr().setVisible(true);
                      }
            switch (atual) {
-                case "cassete": 
+                case "CASSETE": 
                      
                     dispose(); 
                      new TelaCassete().setVisible(true);
